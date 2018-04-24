@@ -22,9 +22,9 @@ None
 | ```memcached_port``` | ```11211``` | Port to listen for connections |
 | ```memcached_max_conn``` | ```512``` | |
 | ```memcached_cache_size``` |  ```64``` | Max memory to use in megabytes |
-| ```memcached_fs_file_max: 756024```| |
+| ```memcached_fs_file_max``` | ```756024```| |
 | ```memcached_options``` | | |
-| ```memcached_user``` | memcache | |
+| ```memcached_user``` | ```memcache``` | |
 
 ## Dependencies
 
