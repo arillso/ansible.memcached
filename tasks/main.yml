@@ -20,6 +20,7 @@
     - packages
 
 - name: install memcached
+  become: true
   package:
     name: "{{ item }}"
   with_items:
@@ -31,6 +32,7 @@
     - packages
 
 - name: configuration memcached
+  become: true
   template:
     src: "{{ memcached_template }}"
     dest: "{{ memcached_configuration }}"

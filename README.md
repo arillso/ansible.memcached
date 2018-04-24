@@ -40,6 +40,10 @@ None
 
 ## Changelog
 
+### 1.1
+
+* add become support
+
 ### 1.0
 
 * initial commit
