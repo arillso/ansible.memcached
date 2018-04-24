@@ -1,2 +1,15 @@
 ---
 # vars file for arillso.memcached
+
+# memcached service name
+memcached_service: memcached
+
+# memcached packages name
+memcached_packages:
+  - memcached
+
+# memcached template name
+memcached_template: memcached_debian.j2
+
+# memcached configuration files
+memcached_configuration: /etc/memcached.conf

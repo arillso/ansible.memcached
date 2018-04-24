@@ -1,2 +1,17 @@
 ---
 # handlers file for arillso.memcached
+
+- name: memcached restart
+  service:
+    name: "{{ memcached_service }}"
+    state: restarted
+
+- name: memcached enabled
+  service:
+    name: "{{ memcached_service }}"
+    enabled: true
+
+- name: memcached started
+  service:
+    name: "{{ memcached_service }}"
+    state: started
