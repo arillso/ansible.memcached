@@ -1,33 +1,23 @@
 ---
 
 galaxy_info:
-  author:
-  description:
-  company:
-  license: MIT
+  author: Simon Baerlocher <sbaerlocher@sbaerlocher.ch>
+  description: Ansible role for installing Memcached.
+  license: license (MIT)
   min_ansible_version: 2
   platforms:
     - name: Archlinux
       versions:
         - all
-    - name: EL
-      versions:
-        - 5
-        - 6
-    - name: Fedora
-      versions:
-        - 16
-        - 17
-        - 18
     - name: Ubuntu
       versions:
-        - precise
-        - quantal
-        - raring
-        - saucy
+        - all
+    - name: EL
+      versions:
+        - all
     - name: Debian
       versions:
-        - wheezy
+        - all
 
   galaxy_tags: []
 

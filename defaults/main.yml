@@ -1,2 +1,23 @@
 ---
 # defaults file for arillso.memcached
+
+# memcached host
+memcached_host: 0.0.0.0
+
+# memcached port
+memcached_port: 11211
+
+# memcached max conn
+memcached_max_conn: 512
+
+# memcached cache size
+memcached_cache_size: 64
+
+# memcached fs file max
+memcached_fs_file_max: 756024
+
+# memcached options
+memcached_options: ""
+
+# memcached user
+memcached_user: memcache

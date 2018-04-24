@@ -19,20 +19,22 @@
     - configuration
     - packages
 
-- name: include distribution tasks
-  include_tasks: "{{ loop_distribution }}"
-  with_first_found:
-    - files:
-        - "{{ ansible_distribution }}-{{ ansible_distribution_version }}.yml"
-        - "{{ ansible_distribution }}-{{ ansible_distribution_major_version }}.yml"
-        - "{{ ansible_distribution }}.yml"
-        - "{{ ansible_os_family }}.yml"
-        - "{{ ansible_system }}.yml"
-        - "defaults.yml"
-      paths:
-        - "distribution"
-  loop_control:
-    loop_var: loop_distribution
+- name: install memcached
+  package:
+    name: "{{ item }}"
+  with_items:
+    - "{{ memcached_packages }}"
+  notify:
+    - memcached started
+    - memcached enabled
+  tags:
+    - packages
+
+- name: configuration memcached
+  template:
+    src: "{{ memcached_template }}"
+    dest: "{{ memcached_configuration }}"
+  notify:
+    - memcached restart
   tags:
     - configuration
-    - packages
